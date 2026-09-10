@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-trade-bg: #0b0e14;
+  --color-trade-card: #131722;
+  --color-trade-border: #2a2e39;
+  
+  --color-trade-up: #10b981;
+  --color-trade-up-bg: rgba(16, 185, 129, 0.1);
+  
+  --color-trade-down: #ef4444;
+  --color-trade-down-bg: rgba(239, 68, 68, 0.1);
+  
+  --color-trade-accent: #8b5cf6;
+  --color-trade-secondary: #3b82f6;
+  
+  --color-trade-text-primary: #f1f5f9;
+  --color-trade-text-secondary: #94a3b8;
+  --color-trade-text-muted: #64748b;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+  
+  --radius-card: 0.75rem;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-trade-bg);
+    color: var(--color-trade-text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Scrollbar for compact dashboards */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-trade-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-trade-text-muted);
+}
